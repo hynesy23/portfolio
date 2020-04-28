@@ -1,38 +1,120 @@
 .App {
+  font-size: 18px;
+  margin: 10px 147px;
+}
+
+/* .about {
+  display: grid;
+  margin: 10px 147px;
+} */
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 992px) {
+  .App {
+    margin: 10px 100px;
+  }
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 760px) {
+  .App {
+    margin: 10px 80px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .App {
+    margin: 10px 50px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .App {
+    margin: 10px 10px;
+  }
+}
+
+.title {
   text-align: center;
+  font-size: 40px;
+  margin-top: 2rem;
+  position: relative;
+  animation: myfirst 8s;
+  animation-direction: forward;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.headers {
+  text-align: left;
+  font-size: 28px;
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.links {
+  margin-top: 3rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.cards {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.images {
+  height: 200px;
+  width: 650px;
+  padding-right: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.marvel-image {
+  height: 200px;
+  width: 740px;
+  padding-right: 40px;
+}
+
+@media screen and (max-width: 800px) {
+  .images {
+    width: 650px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (max-width: 600px) {
+  .App {
+    margin: 10px 10px;
   }
+  .cards {
+    flex-direction: column;
+  }
+  .images {
+    width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+  }
+  .marvel-image {
+    width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+  }
+}
+
+@keyframes myfirst {
+  0% {
+    left: -600px;
+    top: 0px;
+    color: grey;
+  }
+  25% {
+    left: 0px;
+    top: 0px;
+    color: black;
+  }
+}
+
+.long-url {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
